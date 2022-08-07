@@ -156,6 +156,18 @@
 .teacherIntro .container .teacher-table .list1 .column {
   padding: 10px 5px;
 }
+.teacherIntro .container .teacher-table .list1 .column:nth-child(1) {
+  animation-delay: 200ms;
+}
+.teacherIntro .container .teacher-table .list1 .column:nth-child(2) {
+  animation-delay: 400ms;
+}
+.teacherIntro .container .teacher-table .list1 .column:nth-child(3) {
+  animation-delay: 600ms;
+}
+.teacherIntro .container .teacher-table .list1 .column:nth-child(4) {
+  animation-delay: 800ms;
+}
 .teacherIntro .container .teacher-table .list1 .column .col-content {
   margin: 0 20px;
   background-color: #fff;
@@ -195,6 +207,18 @@
 }
 .teacherIntro .container .teacher-table .list2 .column {
   padding: 10px 5px;
+}
+.teacherIntro .container .teacher-table .list2 .column:nth-child(1) {
+  animation-delay: 200ms;
+}
+.teacherIntro .container .teacher-table .list2 .column:nth-child(2) {
+  animation-delay: 400ms;
+}
+.teacherIntro .container .teacher-table .list2 .column:nth-child(3) {
+  animation-delay: 600ms;
+}
+.teacherIntro .container .teacher-table .list2 .column:nth-child(4) {
+  animation-delay: 800ms;
 }
 .teacherIntro .container .teacher-table .list2 .column .col-content {
   margin: 0 20px;
@@ -244,6 +268,8 @@
   margin-top: 100px;
 }
 .register .container .box {
+  max-width: 1000px;
+  margin: auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -267,6 +293,32 @@
   margin: 30px 0;
   text-align: center;
 }
+.register .container .box .register_form .form_content .form_item {
+  padding: 10px 5px 10px 15px;
+}
+.register .container .box .register_form .form_content .form_item input::-webkit-input-placeholder,
+.register .container .box .register_form .form_content .form_item select::-webkit-input-placeholder,
+.register .container .box .register_form .form_content .form_item textarea::-webkit-input-placeholder {
+  /* Edge */
+  color: #191919;
+  font-size: 0.8rem;
+}
+.register .container .box .register_form .form_content .form_item input:-ms-input-placeholder,
+.register .container .box .register_form .form_content .form_item select:-ms-input-placeholder,
+.register .container .box .register_form .form_content .form_item textarea:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #191919;
+  font-size: 0.8rem;
+}
+.register .container .box .register_form .form_content .form_item input::placeholder,
+.register .container .box .register_form .form_content .form_item select::placeholder,
+.register .container .box .register_form .form_content .form_item textarea::placeholder {
+  color: #191919;
+  font-size: 0.8rem;
+}
+.register .container .box .register_form .form_content .form_item span {
+  padding-right: 5px;
+}
 .register .container .box .register_form .form_content .info {
   display: flex;
   justify-content: space-between;
@@ -275,12 +327,11 @@
   border: 1px solid #e5e5e5;
   box-sizing: border-box;
   border-radius: 50px;
-  padding: 5px 5px;
-  width: 40%;
+  width: 100%;
+  margin-right: 5%;
 }
 .register .container .box .register_form .form_content .info .Name span {
   color: #b61984;
-  padding-right: 10px;
   font-size: 14px;
 }
 .register .container .box .register_form .form_content .info .Name input {
@@ -292,12 +343,10 @@
   border: 1px solid #e5e5e5;
   box-sizing: border-box;
   border-radius: 50px;
-  padding: 5px 5px;
-  width: 40%;
+  width: 100%;
 }
 .register .container .box .register_form .form_content .info .Email span {
   color: #b61984;
-  padding-right: 10px;
   font-size: 14px;
 }
 .register .container .box .register_form .form_content .info .Email input {
@@ -309,39 +358,38 @@
   border: 1px solid #e5e5e5;
   box-sizing: border-box;
   border-radius: 50px;
-  padding: 5px 5px;
   width: 100%;
   margin: 20px 0;
 }
 .register .container .box .register_form .form_content .courses span {
   color: #b61984;
-  padding-right: 10px;
   font-size: 14px;
 }
 .register .container .box .register_form .form_content .courses select {
   border: none;
-  font-size: 14px;
+  font-size: 0.8rem;
   width: 90%;
   opacity: 0.55;
+}
+.register .container .box .register_form .form_content .courses select option {
+  color: #191919;
 }
 .register .container .box .register_form .form_content .message {
   border: 1px solid #e5e5e5;
   box-sizing: border-box;
   border-radius: 10px;
-  padding: 5px 5px;
   width: 100%;
   margin-bottom: 30px;
 }
 .register .container .box .register_form .form_content .message span {
   color: #b61984;
-  padding-right: 10px;
   font-size: 14px;
+  vertical-align: top;
 }
-.register .container .box .register_form .form_content .message input {
+.register .container .box .register_form .form_content .message textarea {
   border: none;
   font-size: 14px;
   width: 90%;
-  height: 100px;
 }
 .register .container .box .register_form .form_content button {
   border-radius: 50px;
@@ -361,6 +409,18 @@
 }
 .footer .container .row {
   padding-top: 100px;
+}
+.footer .container .row > .col-3:nth-child(1) {
+  animation-delay: 200ms;
+}
+.footer .container .row > .col-3:nth-child(2) {
+  animation-delay: 400ms;
+}
+.footer .container .row > .col-3:nth-child(3) {
+  animation-delay: 600ms;
+}
+.footer .container .row > .col-3:nth-child(4) {
+  animation-delay: 800ms;
 }
 .footer .container .row .col1 {
   color: #fff;
@@ -430,6 +490,17 @@
   padding: 10px 20px;
   border-radius: 50px;
   border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer .container .row .col2 .emailbox input::-webkit-input-placeholder {
+  /* Edge */
+  color: #fff;
+}
+.footer .container .row .col2 .emailbox input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #fff;
+}
+.footer .container .row .col2 .emailbox input::placeholder {
+  color: #fff;
 }
 .footer .container .row .col2 button {
   width: 220px;

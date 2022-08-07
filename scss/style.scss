@@ -251,11 +251,26 @@ $mg-medium: 25px;
     .container {
         .teacher-table {
             padding-top: 30px;
+
             .list1 {
                 .column {
-
                     padding: 10px 5px;
-                    
+
+                    &:nth-child(1) {
+                        animation-delay: 200ms;
+                    }
+
+                    &:nth-child(2) {
+                        animation-delay: 400ms;
+                    }
+
+                    &:nth-child(3) {
+                        animation-delay: 600ms;
+                    }
+
+                    &:nth-child(4) {
+                        animation-delay: 800ms;
+                    }
 
                     .col-content {
                         margin: 0 20px;
@@ -263,43 +278,47 @@ $mg-medium: 25px;
                         border-radius: 10px;
                         overflow: hidden;
                         transition: all 0.5s;
+
                         &:hover {
-                   
+
                             box-shadow: 0 30px 30px -10px rgb(0 0 0 / 20%);
-                
-                
+
+
                         }
+
                         img {
                             max-width: 100%;
                             height: auto;
                             transition: all 0.5s;
-                           
+
                             &:hover {
                                 transform: scale(1.1);
                                 overflow: hidden;
 
                             }
-        
+
                         }
 
                         .teacher_content {
                             text-align: center;
-        
+
                             h4 {
                                 color: $text-c1-secondary;
                                 font-size: $text-xxs;
                                 font-weight: $text-semibold;
                                 margin-top: 20px;
                             }
+
                             h3 {
                                 font-weight: $text-bold;
                                 font-size: $text-xl;
                             }
+
                             p {
                                 font-size: $text-xs;
                                 padding: 0 20px;
                                 font-weight: $text-regular;
-                    
+
                             }
                         }
 
@@ -308,11 +327,27 @@ $mg-medium: 25px;
 
                 }
             }
+
             .list2 {
                 .column {
+                    &:nth-child(1) {
+                        animation-delay: 200ms;
+                    }
+
+                    &:nth-child(2) {
+                        animation-delay: 400ms;
+                    }
+
+                    &:nth-child(3) {
+                        animation-delay: 600ms;
+                    }
+
+                    &:nth-child(4) {
+                        animation-delay: 800ms;
+                    }
 
                     padding: 10px 5px;
-                    
+
 
                     .col-content {
                         margin: 0 20px;
@@ -320,43 +355,47 @@ $mg-medium: 25px;
                         border-radius: 10px;
                         overflow: hidden;
                         transition: all 0.5s;
+
                         &:hover {
-                   
+
                             box-shadow: 0 30px 30px -10px rgb(0 0 0 / 20%);
-                
-                
+
+
                         }
+
                         img {
                             max-width: 100%;
                             height: auto;
                             transition: all 0.5s;
-                           
+
                             &:hover {
                                 transform: scale(1.1);
                                 overflow: hidden;
 
                             }
-        
+
                         }
 
                         .teacher_content {
                             text-align: center;
-        
+
                             h4 {
                                 color: $text-c1-secondary;
                                 font-size: $text-xxs;
                                 font-weight: $text-semibold;
                                 margin-top: 20px;
                             }
+
                             h3 {
                                 font-weight: $text-bold;
                                 font-size: $text-xl;
                             }
+
                             p {
                                 font-size: $text-xs;
                                 padding: 0 20px;
                                 font-weight: $text-regular;
-                    
+
                             }
                         }
 
@@ -377,148 +416,196 @@ $mg-medium: 25px;
 .register {
     background-image: url(../img/accent_bottom_wave_01.png);
     background-repeat: no-repeat;
-    background-size: 100%;;
+    background-size: 100%;
+    ;
     background-position: bottom center;
+
     .container {
         margin-top: 100px;
-       
+
         .box {
+            max-width: 1000px;
+            margin: auto;
             display: flex;
             justify-content: space-around;
             align-items: center;
+
             .left {
                 img {
                     width: 100%;
                     height: auto;
                 }
-    
+
             }
+
             .register_form {
                 border: 1px solid #fff;
-                background-color: $bg-color-1 ;
+                background-color: $bg-color-1;
                 box-shadow: 0 30px 30px 10px rgb(0 0 0 / 20%);
                 border-radius: 10px;
                 // max-width: 70%;
-                
+
                 .form_content {
                     margin: 30px 20px;
-                    
-    
-               
-                h2 {
-                    font-size:$text-4xl ;
-                    font-weight:$text-bold ;
-                    margin: 30px 0;
-                    text-align: center;
-    
-                }
-                .info {
-                    display: flex;
-                    justify-content: space-between;
 
 
-                    .Name {
+
+                    h2 {
+                        font-size: $text-4xl;
+                        font-weight: $text-bold;
+                        margin: 30px 0;
+                        text-align: center;
+
+                    }
+
+                    .form_item {
+                        padding: 10px 5px 10px 15px;
+
+                        input,
+                        select,
+                        textarea {
+                            &::-webkit-input-placeholder {
+                                /* Edge */
+                                color: $bg-c1-primary;
+                                font-size: .8rem;
+                            }
+
+                            &:-ms-input-placeholder {
+                                /* Internet Explorer 10-11 */
+                                color: $bg-c1-primary;
+                                font-size: .8rem;
+                            }
+
+                            &::placeholder {
+                                color: $bg-c1-primary;
+                                font-size: .8rem;
+                            }
+                        }
+
+                        span {
+                            padding-right: 5px;
+                        }
+                    }
+
+                    .info {
+                        display: flex;
+                        justify-content: space-between;
+
+
+                        .Name {
+                            border: 1px solid #e5e5e5;
+                            box-sizing: border-box;
+                            border-radius: 50px;
+
+                            width: 100%;
+                            margin-right: 5%;
+
+                            span {
+                                color: $text-c1-secondary;
+                                font-size: $text-xs;
+
+                            }
+
+                            input {
+                                border: none;
+                                font-size: $text-xs;
+                                width: 80%;
+                            }
+                        }
+
+                        .Email {
+                            border: 1px solid #e5e5e5;
+                            box-sizing: border-box;
+                            border-radius: 50px;
+
+                            width: 100%;
+
+                            span {
+                                color: $text-c1-secondary;
+
+                                font-size: $text-xs;
+
+                            }
+
+                            input {
+                                border: none;
+                                font-size: $text-xs;
+                                width: 80%;
+                            }
+
+                        }
+                    }
+
+                    .courses {
                         border: 1px solid #e5e5e5;
                         box-sizing: border-box;
                         border-radius: 50px;
-                        padding: 5px 5px;
-                        width: 40%;
-                       
+
+                        width: 100%;
+                        margin: 20px 0;
+
                         span {
-                            color:$text-c1-secondary ;
-                            padding-right: 10px;
+                            color: $text-c1-secondary;
+
                             font-size: $text-xs;
 
-                        }  
-                        input {
-                            border: none;
-                            font-size: $text-xs;
-                            width: 80%;
                         }
+
+                        select {
+                            border: none;
+                            font-size: 0.8rem;
+                            width: 90%;
+                            opacity: 0.55;
+
+                            option {
+                                color: $bg-c1-primary;
+                            }
+
+
+                        }
+
                     }
-                    .Email {
+
+                    .message {
                         border: 1px solid #e5e5e5;
                         box-sizing: border-box;
-                        border-radius: 50px;
-                        padding: 5px 5px;
-                        width: 40%;
-                        span {
-                            color:$text-c1-secondary ;
-                            padding-right: 10px;
-                            font-size: $text-xs;
+                        border-radius: 10px;
+                        width: 100%;
 
-                        }  
-                        input {
+                        margin-bottom: 30px;
+
+                        span {
+                            color: $text-c1-secondary;
+                            font-size: $text-xs;
+                            vertical-align: top;
+                        }
+
+                        textarea {
                             border: none;
                             font-size: $text-xs;
-                            width: 80%;
+                            width: 90%;
                         }
-    
-                    }
-                }
-                .courses {
-                    border: 1px solid #e5e5e5;
-                    box-sizing: border-box;
-                    border-radius: 50px;
-                    padding: 5px 5px;
-                    width: 100%;
-                    margin: 20px 0;
-                    span {
-                        color:$text-c1-secondary ;
-                        padding-right: 10px;
-                        font-size: $text-xs;
 
-                    }  
-                    select {
+                    }
+
+                    button {
+                        border-radius: 50px;
+                        color: $text-c1-light;
+                        background-color: $bg-c1-secondary;
                         border: none;
                         font-size: $text-xs;
-                        width: 90%;
-                        opacity: 0.55;
+                        font-weight: $text-semibold;
+                        padding: 10px 50px;
                     }
 
-                }
-                .message {
-                    border: 1px solid #e5e5e5;
-                    box-sizing: border-box;
-                    border-radius: 10px;
-                    padding: 5px 5px;
-                    width: 100%;
-                   
-                    margin-bottom: 30px;
-                    span {
-                        color:$text-c1-secondary ;
-                        padding-right: 10px;
-                        font-size: $text-xs;
-
-                    }  
-                    input {
-                        border: none;
-                        font-size: $text-xs;
-                        width: 90%;
-                        height: 100px;
-            
-                    }
 
                 }
 
-                button {
-                    border-radius: 50px;
-                    color: $text-c1-light;
-                    background-color: $bg-c1-secondary;
-                    border: none;
-                    font-size:$text-xs ;
-                    font-weight: $text-semibold;
-                    padding: 10px 50px;              
-                }
-            
-    
             }
 
-        }
-       
 
+        }
     }
-}
 }
 
 //footer 
@@ -527,122 +614,166 @@ $mg-medium: 25px;
     background-size: cover;
     height: 500px;
     background-position: center;
+
     .container {
 
         .row {
             padding-top: 100px;
+
+            >.col-3 {
+                &:nth-child(1) {
+                    animation-delay: 200ms;
+                }
+
+                &:nth-child(2) {
+                    animation-delay: 400ms;
+                }
+
+                &:nth-child(3) {
+                    animation-delay: 600ms;
+                }
+
+                &:nth-child(4) {
+                    animation-delay: 800ms;
+                }
+            }
+
             .col1 {
-                color:$text-c1-light;
+                color: $text-c1-light;
+
                 h3 {
                     margin-bottom: 20px;
                     font-weight: $text-bold;
                     font-size: $text-2xl;
 
                 }
+
                 li {
                     list-style: none;
                     margin: 10px 0;
-                    font-size:$text-xs ;
+                    font-size: $text-xs;
+
                     i {
                         margin-right: 10px;
 
                     }
+
                     a {
-                    
-                            font-size: $text-base;
-                           
-        
-                            i {
-    
-                                margin-right: $mg-base;
-                                font-size: $text-xs;
-                                color: $text-c1-light;
-                            }
-        
-                            :hover {
-        
-                                color: $text-c1-primary;
-        
-                            }
-        
-                    
+
+                        font-size: $text-base;
+
+
+                        i {
+
+                            margin-right: $mg-base;
+                            font-size: $text-xs;
+                            color: $text-c1-light;
+                        }
+
+                        :hover {
+
+                            color: $text-c1-primary;
+
+                        }
+
+
 
                     }
                 }
             }
+
             .col2 {
-                color:$text-c1-light;
+                color: $text-c1-light;
+
                 h3 {
                     margin-bottom: 20px;
                     font-weight: $text-bold;
                     font-size: $text-2xl;
 
                 }
+
                 li {
                     list-style: none;
                     margin: 20px 0;
-                    font-size:$text-xs ;
+                    font-size: $text-xs;
                     position: relative;
+
                     &::after {
                         content: '';
                         width: 20%;
-                        background-color:rgba(0,0,0,.1);
+                        background-color: rgba(0, 0, 0, .1);
                         height: 1px;
                         position: absolute;
                         bottom: -10px;
                         left: 0;
-                        
-                        
-                    }
-                
-                    a {
-                    
-                            font-size: $text-xs;
-                            color: $text-c1-light;
 
-                           
-        
-                            &:hover {
-        
-                                color: $text-c1-light;
-                                opacity: 0.8;
-                                text-decoration: none;
-        
-                            }
-        
-                    
+
+                    }
+
+                    a {
+
+                        font-size: $text-xs;
+                        color: $text-c1-light;
+
+
+
+                        &:hover {
+
+                            color: $text-c1-light;
+                            opacity: 0.8;
+                            text-decoration: none;
+
+                        }
+
+
 
                     }
                 }
+
                 .emailbox {
                     margin: 20px 0;
-                    
+
                     input {
                         background-color: $bg-c1-secondary;
-                        color:$text-c1-light ;
+                        color: $text-c1-light;
                         // border: none;
                         padding: 10px 20px;
                         border-radius: 50px;
-                        border:1px solid rgba(255,255,255,.1);
-                        
+                        border: 1px solid rgba(255, 255, 255, .1);
+
+                        &::-webkit-input-placeholder {
+                            /* Edge */
+                            color: $bg-color-1;
+                        }
+
+                        &:-ms-input-placeholder {
+                            /* Internet Explorer 10-11 */
+                            color: $bg-color-1;
+                        }
+
+                        &::placeholder {
+                            color: $bg-color-1;
+                        }
+
+
                     }
                 }
-                
+
                 button {
                     width: 220px;
                     border-radius: 50px;
                     background-color: $bg-color-1;
                     color: $text-c1-primary;
-                    font-size:$text-xs ;
+                    font-size: $text-xs;
                     font-weight: $text-semibold;
                     padding: 10px 0;
-                    border:none;
+                    border: none;
                     transition: 0.5s;
 
                     &:hover {
-                        border: 1px solid $bg-color-1 ;
+                        border: 1px solid $bg-color-1;
                         background-color: $bg-c1-secondary;
-                        color:$text-c1-light ;
+                        color: $text-c1-light;
                     }
 
                 }
@@ -652,6 +783,3 @@ $mg-medium: 25px;
 
     }
 }
-
-
-
