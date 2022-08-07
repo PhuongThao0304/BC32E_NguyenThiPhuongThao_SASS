@@ -1,0 +1,657 @@
+//BG-color: 
+$bg-c1-primary: #191919;
+$bg-c1-secondary: #b61984;
+$bg-color: #dcd0f0;
+$bg-color-1: #fff;
+$bg-c1-transparent: rgba(0, 0, 0, 0);
+$bg-none: none;
+//text-color: màu của text
+$text-c1-primary: #191919;
+$text-c1-secondary: #b61984;
+$text-c1-light: #fff;
+// $text-c1-light: #fff;
+//text-size 
+$text-xxs: 12px;
+$text-xs: 14px;
+$text-base: 16px;
+$text-xl: 18px;
+$text-2xl: 20px;
+$text-3xl: 30px;
+$text-4xl: 40px;
+$text-5xl: 50px;
+$text-6xl: 60px;
+$text-7xl: 70px;
+//text font weight: 
+$text-light: 300;
+$text-regular: 400;
+$text-semibold: 600;
+$text-bold: 700;
+
+// margin
+$mg-base: 16px;
+$mg-small: 10px;
+$mg-xl: 50px;
+$mg-medium: 25px;
+
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+
+}
+
+//header 
+.header {
+    // background-color: yellow;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+
+    .container {
+
+        .menubar {
+            display: flex;
+            justify-content: space-between;
+
+
+            // .logo {
+
+            // }
+
+            .nav {
+                .navlist {
+                    display: flex;
+                    align-items: center;
+                    margin: auto 0;
+
+
+                    li {
+                        list-style: none;
+                        margin-right: $mg-xl;
+                        font-size: $text-xs;
+                        font-weight: $text-semibold;
+
+                        a {
+                            color: $text-c1-primary;
+                            text-decoration: none;
+                            position: relative;
+
+                            &::after {
+                                content: '';
+                                background-color: $bg-c1-secondary;
+                                border-radius: 50%;
+                                width: 8px;
+                                height: 8px;
+                                transition: transform 0.5s;
+                            }
+
+                            &:hover {
+                                color: $text-c1-secondary;
+
+
+                                &::after {
+                                    content: '';
+                                    background-color: $bg-c1-secondary;
+                                    border-radius: 50%;
+                                    width: 8px;
+                                    height: 8px;
+                                    position: absolute;
+                                    bottom: -30px;
+                                    left: 50%;
+                                    transform: scale(1.5);
+
+                                }
+
+                            }
+
+                        }
+                    }
+
+                    .li2 {
+                        a {
+                            &::after {
+                                outline: none;
+                                display: inline-block;
+                                position: absolute;
+                                bottom: -30px;
+                                left: 50%;
+
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            .contactbar {
+                display: flex;
+                align-items: center;
+
+                .phonebar {
+                    margin-right: $mg-medium;
+                    background-color: $bg-c1-secondary;
+                    padding: 10px;
+                    border-radius: 30px;
+                    color: $text-c1-light;
+                    font-size: $text-xs;
+                    transition: linear 0.5s;
+
+                    &:hover {
+                        color: $text-c1-secondary;
+                        background-color: $text-c1-light;
+                        border: 1px solid $text-c1-secondary;
+                    }
+
+                    i {
+                        font-size: $text-base;
+
+                    }
+
+                }
+
+                a {
+                    font-size: $text-base;
+
+                    i {
+                        color: $text-c1-primary;
+                        margin-right: $mg-base;
+                        font-size: $text-xs;
+                    }
+
+                    :hover {
+
+                        color: $text-c1-secondary;
+
+                    }
+
+                }
+            }
+
+
+        }
+
+    }
+}
+
+//carousel
+.carousel {
+    height: 650px;
+
+    .topBG {
+        background-image: url(../img/yellow_top_wave_01.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 200px;
+    }
+
+
+    .container {
+        position: relative;
+
+        .content {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            position: absolute;
+            top: -140px;
+            z-index: 3;
+
+            .left {
+                max-width: 50%;
+
+                .About {
+                    color: $text-c1-secondary;
+                    font-size: $text-xl;
+                    font-weight: $text-semibold;
+                }
+
+                .headline {
+                    color: $text-c1-primary;
+                    font-size: $text-6xl;
+                    font-weight: $text-bold;
+                }
+            }
+
+            .right {
+                img {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+
+
+                }
+            }
+        }
+    }
+
+    .bottomBG {
+        background-image: url(../img/Violet_top_left_wave.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 200px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+//Teacher list 
+.teacherIntro {
+    background-color: $bg-color;
+    background-image: url(../img/Wave_White_bottom_right_shape_01.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+
+    .container {
+        .teacher-table {
+            padding-top: 30px;
+            .list1 {
+                .column {
+
+                    padding: 10px 5px;
+                    
+
+                    .col-content {
+                        margin: 0 20px;
+                        background-color: $bg-color-1;
+                        border-radius: 10px;
+                        overflow: hidden;
+                        transition: all 0.5s;
+                        &:hover {
+                   
+                            box-shadow: 0 30px 30px -10px rgb(0 0 0 / 20%);
+                
+                
+                        }
+                        img {
+                            max-width: 100%;
+                            height: auto;
+                            transition: all 0.5s;
+                           
+                            &:hover {
+                                transform: scale(1.1);
+                                overflow: hidden;
+
+                            }
+        
+                        }
+
+                        .teacher_content {
+                            text-align: center;
+        
+                            h4 {
+                                color: $text-c1-secondary;
+                                font-size: $text-xxs;
+                                font-weight: $text-semibold;
+                                margin-top: 20px;
+                            }
+                            h3 {
+                                font-weight: $text-bold;
+                                font-size: $text-xl;
+                            }
+                            p {
+                                font-size: $text-xs;
+                                padding: 0 20px;
+                                font-weight: $text-regular;
+                    
+                            }
+                        }
+
+
+                    }
+
+                }
+            }
+            .list2 {
+                .column {
+
+                    padding: 10px 5px;
+                    
+
+                    .col-content {
+                        margin: 0 20px;
+                        background-color: $bg-color-1;
+                        border-radius: 10px;
+                        overflow: hidden;
+                        transition: all 0.5s;
+                        &:hover {
+                   
+                            box-shadow: 0 30px 30px -10px rgb(0 0 0 / 20%);
+                
+                
+                        }
+                        img {
+                            max-width: 100%;
+                            height: auto;
+                            transition: all 0.5s;
+                           
+                            &:hover {
+                                transform: scale(1.1);
+                                overflow: hidden;
+
+                            }
+        
+                        }
+
+                        .teacher_content {
+                            text-align: center;
+        
+                            h4 {
+                                color: $text-c1-secondary;
+                                font-size: $text-xxs;
+                                font-weight: $text-semibold;
+                                margin-top: 20px;
+                            }
+                            h3 {
+                                font-weight: $text-bold;
+                                font-size: $text-xl;
+                            }
+                            p {
+                                font-size: $text-xs;
+                                padding: 0 20px;
+                                font-weight: $text-regular;
+                    
+                            }
+                        }
+
+
+                    }
+
+                }
+            }
+
+
+        }
+    }
+}
+
+
+//Register 
+
+.register {
+    background-image: url(../img/accent_bottom_wave_01.png);
+    background-repeat: no-repeat;
+    background-size: 100%;;
+    background-position: bottom center;
+    .container {
+        margin-top: 100px;
+       
+        .box {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            .left {
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+    
+            }
+            .register_form {
+                border: 1px solid #fff;
+                background-color: $bg-color-1 ;
+                box-shadow: 0 30px 30px 10px rgb(0 0 0 / 20%);
+                border-radius: 10px;
+                // max-width: 70%;
+                
+                .form_content {
+                    margin: 30px 20px;
+                    
+    
+               
+                h2 {
+                    font-size:$text-4xl ;
+                    font-weight:$text-bold ;
+                    margin: 30px 0;
+                    text-align: center;
+    
+                }
+                .info {
+                    display: flex;
+                    justify-content: space-between;
+
+
+                    .Name {
+                        border: 1px solid #e5e5e5;
+                        box-sizing: border-box;
+                        border-radius: 50px;
+                        padding: 5px 5px;
+                        width: 40%;
+                       
+                        span {
+                            color:$text-c1-secondary ;
+                            padding-right: 10px;
+                            font-size: $text-xs;
+
+                        }  
+                        input {
+                            border: none;
+                            font-size: $text-xs;
+                            width: 80%;
+                        }
+                    }
+                    .Email {
+                        border: 1px solid #e5e5e5;
+                        box-sizing: border-box;
+                        border-radius: 50px;
+                        padding: 5px 5px;
+                        width: 40%;
+                        span {
+                            color:$text-c1-secondary ;
+                            padding-right: 10px;
+                            font-size: $text-xs;
+
+                        }  
+                        input {
+                            border: none;
+                            font-size: $text-xs;
+                            width: 80%;
+                        }
+    
+                    }
+                }
+                .courses {
+                    border: 1px solid #e5e5e5;
+                    box-sizing: border-box;
+                    border-radius: 50px;
+                    padding: 5px 5px;
+                    width: 100%;
+                    margin: 20px 0;
+                    span {
+                        color:$text-c1-secondary ;
+                        padding-right: 10px;
+                        font-size: $text-xs;
+
+                    }  
+                    select {
+                        border: none;
+                        font-size: $text-xs;
+                        width: 90%;
+                        opacity: 0.55;
+                    }
+
+                }
+                .message {
+                    border: 1px solid #e5e5e5;
+                    box-sizing: border-box;
+                    border-radius: 10px;
+                    padding: 5px 5px;
+                    width: 100%;
+                   
+                    margin-bottom: 30px;
+                    span {
+                        color:$text-c1-secondary ;
+                        padding-right: 10px;
+                        font-size: $text-xs;
+
+                    }  
+                    input {
+                        border: none;
+                        font-size: $text-xs;
+                        width: 90%;
+                        height: 100px;
+            
+                    }
+
+                }
+
+                button {
+                    border-radius: 50px;
+                    color: $text-c1-light;
+                    background-color: $bg-c1-secondary;
+                    border: none;
+                    font-size:$text-xs ;
+                    font-weight: $text-semibold;
+                    padding: 10px 50px;              
+                }
+            
+    
+            }
+
+        }
+       
+
+    }
+}
+}
+
+//footer 
+.footer {
+    background-image: url(../img/footer_background.jpeg);
+    background-size: cover;
+    height: 500px;
+    background-position: center;
+    .container {
+
+        .row {
+            padding-top: 100px;
+            .col1 {
+                color:$text-c1-light;
+                h3 {
+                    margin-bottom: 20px;
+                    font-weight: $text-bold;
+                    font-size: $text-2xl;
+
+                }
+                li {
+                    list-style: none;
+                    margin: 10px 0;
+                    font-size:$text-xs ;
+                    i {
+                        margin-right: 10px;
+
+                    }
+                    a {
+                    
+                            font-size: $text-base;
+                           
+        
+                            i {
+    
+                                margin-right: $mg-base;
+                                font-size: $text-xs;
+                                color: $text-c1-light;
+                            }
+        
+                            :hover {
+        
+                                color: $text-c1-primary;
+        
+                            }
+        
+                    
+
+                    }
+                }
+            }
+            .col2 {
+                color:$text-c1-light;
+                h3 {
+                    margin-bottom: 20px;
+                    font-weight: $text-bold;
+                    font-size: $text-2xl;
+
+                }
+                li {
+                    list-style: none;
+                    margin: 20px 0;
+                    font-size:$text-xs ;
+                    position: relative;
+                    &::after {
+                        content: '';
+                        width: 20%;
+                        background-color:rgba(0,0,0,.1);
+                        height: 1px;
+                        position: absolute;
+                        bottom: -10px;
+                        left: 0;
+                        
+                        
+                    }
+                
+                    a {
+                    
+                            font-size: $text-xs;
+                            color: $text-c1-light;
+
+                           
+        
+                            &:hover {
+        
+                                color: $text-c1-light;
+                                opacity: 0.8;
+                                text-decoration: none;
+        
+                            }
+        
+                    
+
+                    }
+                }
+                .emailbox {
+                    margin: 20px 0;
+                    
+                    input {
+                        background-color: $bg-c1-secondary;
+                        color:$text-c1-light ;
+                        // border: none;
+                        padding: 10px 20px;
+                        border-radius: 50px;
+                        border:1px solid rgba(255,255,255,.1);
+                        
+                    }
+                }
+                
+                button {
+                    width: 220px;
+                    border-radius: 50px;
+                    background-color: $bg-color-1;
+                    color: $text-c1-primary;
+                    font-size:$text-xs ;
+                    font-weight: $text-semibold;
+                    padding: 10px 0;
+                    border:none;
+                    transition: 0.5s;
+
+                    &:hover {
+                        border: 1px solid $bg-color-1 ;
+                        background-color: $bg-c1-secondary;
+                        color:$text-c1-light ;
+                    }
+
+                }
+            }
+        }
+
+
+    }
+}
+
+
+
